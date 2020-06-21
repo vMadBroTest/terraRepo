@@ -13,3 +13,4 @@ phases:
       - echo Run terraform init and apply
       - terraform init
       - terraform apply -auto-approve
+
