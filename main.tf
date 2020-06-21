@@ -4,7 +4,7 @@ provider "aws" {
 
 terraform {
     backend "s3" {
-        bucket = "terrapipeline14-terraformstatestore-1b8pgn3g6ermd"
+        bucket = "terrapipeline15-terraformstatestore-1lvodtvh0yzmt"
         key = "terraform.tfstate"
         region = "us-east-1"
         dynamodb_table = "terrapipeline15-lockdb"
