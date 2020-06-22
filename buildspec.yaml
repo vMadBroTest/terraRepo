@@ -1,6 +1,11 @@
 
 version: 0.2
 
+env:
+  variables:
+    STATE_BUCKET: "pipeline"
+    LOCKDB_TABLE: "table"
+
 phases:
   install:
     commands:
@@ -11,5 +16,5 @@ phases:
   build:
     commands:
       - echo Run terraform init and apply
-      - terraform init
+      - terraform init -backend-config="bucket=$STATE_BUCKET" -backend-config="dynamodb_table=$LOCKDB_TABLE"
       - terraform apply -auto-approve
