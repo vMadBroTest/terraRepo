@@ -4,10 +4,10 @@ provider "aws" {
 
 terraform {
     backend "s3" {
-        bucket = "changeme"
+        bucket = "handled-by-pipline"
         key = "terraform.tfstate"
         region = "us-east-1"
-        dynamodb_table = "changeme"
+        dynamodb_table = "handled-by-pipline"
     }
 }
 
@@ -16,6 +16,6 @@ resource "aws_instance" "remote"{
     instance_type = "t2.micro"
 
     tags = {
-        Name = "CF-Pipeline-Build"
+        Name = "CF-Pipeline-Build-2"
     }
 }
